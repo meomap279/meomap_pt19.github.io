@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+header {
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-shadow: 2px 7px 5px rgb(15, 11, 255), 0px -4px 10px rgb(209, 241, 183);
+    padding-top: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    text-shadow: 2px 7px 5px rgb(15, 11, 255), 0px -4px 10px rgb(209, 241, 183);
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.5rem;
+}
+
+h6 {
+    font-size: 0.25rem;
+}
+
+.logo {
+    display: block;
+    float: left;
+    padding-left: 30px;
+    margin-top: 1.5px;
+    top: 5px;
+}
+
+header {
+    margin-top: 5px;
+}
+
+nav ul {
+    padding-top: 15px;
+    float: right;
+    opacity: 0.7;
+}
+
+nav {
+    overflow: visible;
+}
+
+nav {
+    display: block;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: auto;
+    z-index: 9999;
+    opacity: 0.9;
+}
+
+header>i {
+    margin-left: 5px;
+    font-size: 16.5px;
+}
+
+nav ul>li {
+    color: black;
+    padding-top: 0;
+    float: left;
+    list-style: none;
+    padding-right: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 19px;
+}
+
+ul li>a:hover {
+    color: #ffb300;
+}
+
+main,
+footer {
+    padding: 70px 20px 40px 20px;
+    width: 1200px;
+    margin: auto;
+}
+
+main section h1 {
+    padding-top: 0;
+}
+
+section article p {
+    padding-top: 20px;
+}
+
+ul {
+    display: inline;
+}
+
+ul>li {
+    display: flex;
+}
+
+#abc {
+    display: flex;
+    color: white;
+    padding-top: 20px;
+    margin: 0px;
+}
+
+#abc h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#abc img {
+    width: 270px;
+    padding-top: 10px;
+    height: 355px;
+}
+
+#abc h1 {
+    padding-top: 250px;
+    position: relative;
+    right: 4%;
+    margin: 0;
+}
+
+main img {
+    margin-top: 30px;
+}
+
+article>img {
+    width: 600px;
+    margin-left: 22%;
+    margin-right: 22%;
+}
+
+footer {
+    float: left;
+    padding: 10px 20px 10px 20px;
+    margin: auto;
+}

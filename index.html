@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>information</title>
+    <link rel="stylesheet" href="CSS/information.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+
+<body>
+    <header>
+        <h1><i class="fa fa-info-circle" aria-hidden="true"></i></h1>
+        <h1>User Information - NTP</h1>
+    </header>
+    <main>
+        <form method="post" autocomplete="off" name="google-sheet">
+            <div class="msg"></div>
+            <table border="1">
+                <colgroup style="width: 200px;"></colgroup>
+                <tr>
+                    <td><label for="">Full Name</label></td>
+                    <td><input maxlength="50" required type="text" id="fullName" name="fullName" placeholder="Enter Your Full Name" required=""></td>
+                </tr>
+                <tr>
+                    <td><label for="">Email</label></td>
+                    <td>
+                        <input type="email" required name="email" id="email" placeholder="Enter Your Email" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Phone Number</label></td>
+                    <td>
+                        <input type="number" required name="phone" id="phone" placeholder="Enter Your Phone Number" maxlength="9" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td><input type="date" id="dateOfBirth" name="dateOfBirth" required=""></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="Gender" value="male"> Male <i class="fa fa-male" aria-hidden="true"></i> <br>
+                        <input type="radio" name="Gender" value="female"> Female <i class="fa fa-female" aria-hidden="true"> </i><br>
+                        <input type="radio" name="Gender" value="other"> other <i class="fa fa-user" aria-hidden="true">
+                        </i><br>
+                    </td>
+                </tr>
+                </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <button><i class="fa fa-cloud-upload" aria-hidden="true"></i> Submit
+                        </button>
+                        <button type="reset" name=""><i class="fa fa-refresh" aria-hidden="true"></i> Reload
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer>
+        <h2>Contact Info</h2>
+        <i><i class="fa fa-star-o" aria-hidden="true"></i> Website Developer : Thanh Phong <i class="fa fa-star-o" aria-hidden="true"></i> <br>
+        <i class="fa fa-phone-square" aria-hidden="true"></i> <a href="tel:+0392268674">0392268674 </a> <br>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:thanhphongyd2@gmail.com">
+            thanhphongyd2@gmail.com</a> <br>
+        <i class="fa fa-map-marker" aria-hidden="true"></i> Address : Thanh Hoa city
+
+        <audio autoplay loop>
+                <source src="Music/Khởi hành guitar.mp3" type="audio/mpeg">
+            </audio>
+    </footer>
+
+    <script type="text/javascript">
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbwlKo_O7xXbgY3saI945svN4hu6rZzzvtFlx5hCF0eCAKyF9-DaH9oIhrNfPARv5EWwgQ/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert("You have successfully submitted!!!"))
+                .then(response => alert(document.location.replace('/home.html')))
+                .catch(error => console.error('Error!', error.message))
+
+        })
+    </script>
+
+
+</body>
+
+</html>
